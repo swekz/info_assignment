@@ -6,24 +6,26 @@
 
 3) Error Handling in book(): When a new event was passed to insert, the parameter was incorrectly named node=Node(start, end). This is inconsistent with the method signature in Node.insert().
 
-4) logical error in class node in insert function: 
-#----------before debugging---------------
-if node.start <= self.end:  
-#--------after debugging---------------
-if node.start >= self.end:
+4) logical error in class node in insert function:
+   
+   #-------before debugging  
+   if node.start <= self.end:  
+   #-------after debugging  
+   if node.start >= self.end:
+   
+   #------before debugging  
+   elif node.end >= self.start:  
+   #------after debugging  
+   if node.end <= self.start:
+   
+   #----------error in return statement of right node-----  
+   
+   #------before debugging---------------  
+   return self.left_child.insert(node)  
+   #------after debugging---------------  
+   return self.right_child.insert(node)  
 
-#----before debugging----------
-elif node.end >= self.start:
-#----after debugging----------
-if node.end <= self.start:
-
-#----------error in return statement of right node-----
-#--before debugging---------------
-return self.left_child.insert(node)
-#--after debugging---------------
-return self.right_child.insert(node)
-
-#------run python files-------
+#------run python files-------  
 python time1.py
 
 python calendar1.py
