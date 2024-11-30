@@ -23,5 +23,12 @@ return self.left_child.insert(node)
 #--after debugging---------------
 return self.right_child.insert(node)
 
+#------run python files-------
+python time1.py
+
+python calendar1.py
+
+python fuel.py
+
 
 
